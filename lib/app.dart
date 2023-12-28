@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:t_store/features/authentication/screens/on_boarding/on_boarding.dart';
 import 'package:t_store/utils/theme/theme.dart';
 
 class MyApp extends StatelessWidget {
@@ -7,10 +9,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       themeMode: ThemeMode.system,
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
+      home:const OnBoardingScreen(),
     );
   }
 }

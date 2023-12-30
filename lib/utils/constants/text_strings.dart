@@ -47,5 +47,7 @@ class TTexts {
   static const String confirmEmail ="Verify Your Email Address ! ";
   static const String confirmationEmailSubTitle ='Congratulation ! your acc await : verify your email to start shopping ';
   static const String emailNotReceivedMassage ="Didn't get the email? check your spam or resend it  ";
+  static const String yourAccountCreateTitle ="Your account create success";
+  static const String yourAccountCreateSubTitle ="Welcome to your ultimate shopping destination : your account is created";
 
 }

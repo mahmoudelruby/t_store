@@ -11,4 +11,13 @@ class TImages {
   //Logos path
 static const String darkLogo = 'assets/logos/logo-black.png';
 static const String lightLogo= 'assets/logos/splash_logo.png';
+
+// categories ico
+static const animal= 'assets/icons/categories/animal.png';
+static const clothes ='assets/icons/categories/clothes.png';
+static const devices='assets/icons/categories/devices.png';
+static const furniture = 'assets/icons/categories/furniture.png';
+static const shoes = 'assets/icons/categories/shose.png';
+static const sports = 'assets/icons/categories/sports.png';
+
 }

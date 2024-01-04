@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-
 import 'package:t_store/common/widgets/custom_widget/curved_edge_widget.dart';
+import 'package:t_store/common/widgets/layout/grid_layout.dart';
+import 'package:t_store/common/widgets/product/product_card_vertical.dart';
 import 'package:t_store/common/widgets/search.dart';
 import 'package:t_store/common/widgets/texts/section_heading.dart';
-
+import 'package:t_store/features/authentication/screens/home_screen/promo_slider.dart';
 import 'package:t_store/utils/constants/colors.dart';
-
+import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
-
 import 'home_appbar.dart';
 import 'home_category.dart';
 
@@ -21,32 +21,32 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             ///header
-            CurvedEdgeWidget(
+            const CurvedEdgeWidget(
                 child: Column(
               children: [
                 ///Appbar
-                const HomeAppBar(),
+                HomeAppBar(),
 
                 /// searchbar
-                const SearchBarContainer(
+                SearchBarContainer(
                   text: 'Search in Store ',
                 ),
-                const SizedBox(
+                SizedBox(
                   height: TSizes.spaceBtwSections,
                 ),
 
                 ///categories
                 Padding(
-                  padding: const EdgeInsets.only(left: TSizes.defaultSpace),
+                  padding: EdgeInsets.only(left: TSizes.defaultSpace),
                   child: Column(
                     children: [
                       ///headline text
-                      const SectionHeading(
+                      SectionHeading(
                         title: 'Popular Categories',
                         showActionButton: false,
                         textColor: TColors.white,
                       ),
-                      const SizedBox(
+                      SizedBox(
                         height: TSizes.spaceBtwItems,
                       ),
 
@@ -57,9 +57,34 @@ class HomeScreen extends StatelessWidget {
                 )
               ],
             )),
+
+            ///body of HomeScreen
+            Padding(
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              child: Column(
+                children: [
+                  ///slider image
+                  const PromoSlider(
+                    banners: [
+                      TImages.promoBanner1,
+                      TImages.promoBanner2,
+                      TImages.promoBanner3
+                    ],
+                  ),
+                  const SizedBox(
+                    height: TSizes.spaceBtwSections,
+                  ),
+                 SectionHeading(title: 'popular product',onPressed:(){}),
+                 const SizedBox(height: TSizes.spaceBtwItems,),
+                  GridViewLayout(itemBuilder: (_,index)=>const ProductCardVertical(),itemCount: 2,)
+                ],
+              ),
+            )
           ],
         ),
       ),
     );
   }
 }
+
+

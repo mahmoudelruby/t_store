@@ -76,7 +76,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                  SectionHeading(title: 'popular product',onPressed:(){}),
                  const SizedBox(height: TSizes.spaceBtwItems,),
-                  GridViewLayout(itemBuilder: (_,index)=>const ProductCardVertical(),itemCount: 2,)
+                  GridViewLayout(itemBuilder: (_,index)=>const ProductCardVertical(),itemCount: 8,)
                 ],
               ),
             )

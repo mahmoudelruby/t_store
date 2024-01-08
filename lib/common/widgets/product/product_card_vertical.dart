@@ -4,6 +4,8 @@ import 'package:t_store/common/styles/shadow_style.dart';
 import 'package:t_store/common/widgets/custom_widget/shapes/circular_container.dart';
 import 'package:t_store/common/widgets/icons/cicular_icon.dart';
 import 'package:t_store/common/widgets/images/roundedimage.dart';
+import 'package:t_store/common/widgets/texts/brand_title_text_with_verified_icon.dart';
+import 'package:t_store/common/widgets/texts/product_price.dart';
 import 'package:t_store/common/widgets/texts/product_title.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
@@ -70,65 +72,47 @@ class ProductCardVertical extends StatelessWidget {
             ),
 
             ///details of product
-            Padding(
-              padding: const EdgeInsets.only(left: TSizes.sm),
+           const Padding(
+              padding:  EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const ProductTitle(
+                   ProductTitle(
                     title: 'Nike Shoes',
                     smallSize: false,
                   ),
-                  const SizedBox(
+                   SizedBox(
                     height: TSizes.spaceBtwItems / 2,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        'Nike',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(
-                        width: TSizes.xs,
-                      ),
-                      const Icon(
-                        Iconsax.verify5,
-                        color: TColors.primary,
-                        size: TSizes.iconXs,
-                      )
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        '\$35',
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.headlineMedium,
-                      ),
-                      Container(
-                        decoration: const BoxDecoration(
-                            color: TColors.dark,
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(TSizes.cardRadiusMd),
-                                bottomRight: Radius.circular(
-                                    TSizes.productImageRadius))),
-                        child: const SizedBox(
-                          width: TSizes.iconLg * 1.2,
-                          height: TSizes.iconLg * 1.2,
-                          child: Icon(
-                            Iconsax.add,
-                            color: TColors.white,
-                          ),
-                        ),
-                      )
-                    ],
-                  )
+               BrandTitleWithVerticalIcon(title: 'Nike')
                 ],
               ),
+            ),
+            const Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+              const  Padding(
+                  padding:  EdgeInsets.only(left: TSizes.sm),
+                  child: ProductPriceText(price: '35.0',isLarge: true,),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                      color: TColors.dark,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(TSizes.cardRadiusMd),
+                          bottomRight:
+                              Radius.circular(TSizes.productImageRadius))),
+                  child: const SizedBox(
+                    width: TSizes.iconLg * 1.2,
+                    height: TSizes.iconLg * 1.2,
+                    child: Icon(
+                      Iconsax.add,
+                      color: TColors.white,
+                    ),
+                  ),
+                )
+              ],
             )
           ],
         ),
@@ -136,3 +120,4 @@ class ProductCardVertical extends StatelessWidget {
     );
   }
 }
+

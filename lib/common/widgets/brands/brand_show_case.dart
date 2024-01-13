@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:t_store/common/widgets/brands/brand_card.dart';
 import 'package:t_store/common/widgets/custom_widget/shapes/circular_container.dart';
 import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_func.dart';
 
@@ -20,12 +19,12 @@ class BrandShowCase extends StatelessWidget {
       showBorder: true,
       backgroundColor: Colors.transparent,
       borderColor: TColors.darkGrey,
-      padding: EdgeInsets.all(TSizes.md),
-      margin: EdgeInsets.only(bottom: TSizes.spaceBtwItems),
+      padding: const EdgeInsets.all(TSizes.md),
+      margin: const EdgeInsets.only(bottom: TSizes.spaceBtwItems),
       child: Column(
         children: [
-          BrandCard(showBorder: true),
-          SizedBox(height: TSizes.spaceBtwItems,),
+          const BrandCard(showBorder: true),
+          const SizedBox(height: TSizes.spaceBtwItems,),
           Row(
             children: images
                 .map((image) => brandTopProductImageWidget(image, context))
@@ -42,8 +41,8 @@ class BrandShowCase extends StatelessWidget {
       child: TCircularContainer(
         height: 100,
         backgroundColor: darkMode ? TColors.darkerGrey : TColors.light,
-        margin: EdgeInsets.only(right: TSizes.sm),
-        padding: EdgeInsets.all(TSizes.md),
+        margin: const EdgeInsets.only(right: TSizes.sm),
+        padding: const EdgeInsets.all(TSizes.md),
         child: Image(
           fit: BoxFit.contain,
           image: AssetImage(image),

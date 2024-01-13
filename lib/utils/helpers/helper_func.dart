@@ -28,6 +28,7 @@ class THelperFunctions {
     } else if (value == 'Orange') {
       return Colors.orange;
     }
+    return null;
   }
 
   static void navigateToScreen(BuildContext context, Widget screen) {

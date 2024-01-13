@@ -61,7 +61,8 @@ class ProductCardVertical extends StatelessWidget {
                       top: 0,
                       right: 0,
                       child: CircularIcon(
-                        icon: Iconsax.heart,
+                        iconPressed: Iconsax.heart5,
+                        iconUnPressed: Iconsax.heart,
                         color: Colors.red,
                       ))
                 ],

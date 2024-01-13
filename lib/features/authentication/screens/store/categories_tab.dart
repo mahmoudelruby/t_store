@@ -13,13 +13,13 @@ class CategoryTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
         shrinkWrap: true,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         children: [
           Padding(
-            padding: EdgeInsets.all(TSizes.defaultSpace),
+            padding: const EdgeInsets.all(TSizes.defaultSpace),
             child: Column(
               children: [
-                BrandShowCase(
+                const BrandShowCase(
                   images: [
                     TImages.productImage1,
                     TImages.productImage3,
@@ -30,12 +30,12 @@ class CategoryTab extends StatelessWidget {
                   title: 'You might like',
                   onPressed: () {},
                 ),
-                SizedBox(
+                const SizedBox(
                   height: TSizes.spaceBtwItems,
                 ),
                 GridViewLayout(
                     itemCount: 4,
-                    itemBuilder: (_, index) => ProductCardVertical())
+                    itemBuilder: (_, index) => const ProductCardVertical())
               ],
             ),
           ),

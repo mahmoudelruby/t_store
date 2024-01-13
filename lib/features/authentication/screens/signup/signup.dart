@@ -43,7 +43,7 @@ class SignUp extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  Get.to(() => VerifyEmailScreen());
+                  Get.to(() => const VerifyEmailScreen());
                 },
                 child: const Text(TTexts.createAcc),
               ),

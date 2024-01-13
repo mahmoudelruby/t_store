@@ -3,12 +3,8 @@ import 'package:get/get.dart';
 import 'package:t_store/features/authentication/controllers/on_boarding/on_boarding_controller.dart';
 import 'package:t_store/features/authentication/screens/on_boarding/on_boarding_navigation_bar.dart';
 import 'package:t_store/features/authentication/screens/on_boarding/on_boarding_page.dart';
-import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
-import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
-import 'package:t_store/utils/device/devices.dart';
-import 'package:t_store/utils/helpers/helper_func.dart';
 import 'on_boarding_skip.dart';
 import 'on_boarding_button.dart';
 

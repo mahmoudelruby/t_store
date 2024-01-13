@@ -30,4 +30,6 @@ static const productImage1='assets/images/product/sneakers.jpg';
 static const productImage2='assets/images/product/short.jpg';
   static const productImage3='assets/images/product/jackets.jpg';
 
+  //
+static const String user='assets/images/user.jpg';
 }

@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:t_store/features/authentication/controllers/on_boarding/on_boarding_controller.dart';
-import 'package:t_store/features/authentication/screens/on_boarding/on_boarding_button.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/device/devices.dart';

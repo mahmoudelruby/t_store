@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/styles/shadow_style.dart';
 import 'package:t_store/common/widgets/custom_widget/shapes/circular_container.dart';
@@ -7,6 +9,7 @@ import 'package:t_store/common/widgets/images/roundedimage.dart';
 import 'package:t_store/common/widgets/texts/brand_title_text_with_verified_icon.dart';
 import 'package:t_store/common/widgets/texts/product_price.dart';
 import 'package:t_store/common/widgets/texts/product_title.dart';
+import 'package:t_store/features/shop/screens/product_details/product_details.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
@@ -19,7 +22,7 @@ class ProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final darkMode = THelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(() => const ProductDetails()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -61,8 +64,7 @@ class ProductCardVertical extends StatelessWidget {
                       top: 0,
                       right: 0,
                       child: CircularIcon(
-                        iconPressed: Iconsax.heart5,
-                        iconUnPressed: Iconsax.heart,
+                       icon: Iconsax.heart5,
                         color: Colors.red,
                       ))
                 ],
@@ -73,19 +75,19 @@ class ProductCardVertical extends StatelessWidget {
             ),
 
             ///details of product
-           const Padding(
-              padding:  EdgeInsets.only(left: TSizes.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                   ProductTitle(
+                  ProductTitle(
                     title: 'Nike Shoes',
                     smallSize: false,
                   ),
-                   SizedBox(
+                  SizedBox(
                     height: TSizes.spaceBtwItems / 2,
                   ),
-               BrandTitleWithVerticalIcon(title: 'Nike')
+                  BrandTitleWithVerticalIcon(title: 'Nike')
                 ],
               ),
             ),
@@ -93,9 +95,12 @@ class ProductCardVertical extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-              const  Padding(
-                  padding:  EdgeInsets.only(left: TSizes.sm),
-                  child: ProductPriceText(price: '35.0',isLarge: true,),
+                const Padding(
+                  padding: EdgeInsets.only(left: TSizes.sm),
+                  child: ProductPriceText(
+                    price: '35.0',
+                    isLarge: true,
+                  ),
                 ),
                 Container(
                   decoration: const BoxDecoration(
@@ -121,4 +126,3 @@ class ProductCardVertical extends StatelessWidget {
     );
   }
 }
-

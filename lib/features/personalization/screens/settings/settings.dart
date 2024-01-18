@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/appbar/appbar.dart';
 import 'package:t_store/common/widgets/custom_widget/curved_edge_widget.dart';
@@ -6,6 +7,7 @@ import 'package:t_store/common/widgets/custom_widget/curved_edge_widget.dart';
 import 'package:t_store/common/widgets/texts/section_heading.dart';
 import 'package:t_store/common/widgets/tiles/setting_menu_tile.dart';
 import 'package:t_store/common/widgets/tiles/user_profile_tiles.dart';
+import 'package:t_store/features/personalization/screens/profile/profile.dart';
 import 'package:t_store/utils/constants/colors.dart';
 
 import 'package:t_store/utils/constants/sizes.dart';
@@ -34,7 +36,7 @@ class SettingsScreen extends StatelessWidget {
                 const SizedBox(
                   height: TSizes.spaceBtwItems,
                 ),
-                const UserProfileTile(),
+                 UserProfileTile(onTap: ()=> Get.to(()=>const ProfileScreen())),
                 const SizedBox(
                   height: TSizes.spaceBtwSections,
                 )
@@ -130,7 +132,9 @@ class SettingsScreen extends StatelessWidget {
                       child: const Text('Logout'),
                     ),
                   ),
-                  const SizedBox(height: TSizes.spaceBtwSections*2,)
+                  const SizedBox(
+                    height: TSizes.spaceBtwSections * 2,
+                  )
                 ],
               ),
             )

@@ -9,15 +9,13 @@ class CircularIcon extends StatelessWidget {
     this.width,
     this.height,
     this.size = TSizes.lg,
-
     this.color,
     this.backgroundColor,
     this.onPressed,
-    required this.iconUnPressed,
-    required this.iconPressed,
+    required this.icon,
   });
   final double? width, height, size;
-  final IconData iconUnPressed,iconPressed;
+  final IconData icon;
   final Color? color;
   final Color? backgroundColor;
   final VoidCallback? onPressed;
@@ -37,7 +35,7 @@ class CircularIcon extends StatelessWidget {
                   : TColors.white.withOpacity(.9)),
       child: IconButton(
         onPressed: onPressed,
-        icon: Icon(onPressed != null?iconUnPressed:iconPressed,color: color,size: size,),
+        icon: Icon(icon,color: color,size: size,),
       ),
     );
   }

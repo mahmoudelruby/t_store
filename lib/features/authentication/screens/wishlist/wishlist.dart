@@ -21,8 +21,7 @@ class FavouriteScreen extends StatelessWidget {
         ),
         actions: [
           CircularIcon(
-            iconPressed: Iconsax.heart5,
-            iconUnPressed: Iconsax.heart,
+          icon: Iconsax.heart5,color: Colors.red,
             onPressed: () => Get.to(const HomeScreen()),
           )
         ],

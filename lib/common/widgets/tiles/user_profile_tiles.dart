@@ -14,7 +14,7 @@ class UserProfileTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       onTap: onTap,
-      leading: CircularImage(
+      leading: const CircularImage(
         image: TImages.user,
         width: 50,
         height: 50,
@@ -34,7 +34,7 @@ class UserProfileTile extends StatelessWidget {
       ),
       trailing: IconButton(
         onPressed: () {},
-        icon: Icon(
+        icon: const Icon(
           Iconsax.edit,
           color: TColors.white,
         ),

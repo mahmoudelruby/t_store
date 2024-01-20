@@ -5,8 +5,9 @@ import 'package:t_store/features/authentication/screens/on_boarding/on_boarding_
 import 'package:t_store/features/authentication/screens/on_boarding/on_boarding_page.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
-import 'on_boarding_skip.dart';
+
 import 'on_boarding_button.dart';
+import 'on_boarding_skip.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);

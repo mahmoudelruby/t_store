@@ -12,11 +12,11 @@ class BottomAddToCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final darkMode = THelperFunctions.isDarkMode(context);
     return Container(
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
           horizontal: TSizes.defaultSpace, vertical: TSizes.defaultSpace / 2),
       decoration: BoxDecoration(
           color: darkMode ? TColors.darkerGrey : TColors.light,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(TSizes.cardRadiusLg),
               topRight: Radius.circular(TSizes.cardRadiusLg))),
       child: Row(
@@ -24,24 +24,24 @@ class BottomAddToCard extends StatelessWidget {
         children: [
           Row(
             children: [
-              CircularIcon(
+              const CircularIcon(
                 icon: Iconsax.minus,
                 backgroundColor: TColors.grey,
                 width: 40,
                 height: 40,
                 color: TColors.black,
               ),
-              SizedBox(
+              const SizedBox(
                 width: TSizes.spaceBtwItems,
               ),
               Text(
                 '2',
                 style: Theme.of(context).textTheme.titleSmall,
               ),
-              SizedBox(
+              const SizedBox(
                 width: TSizes.spaceBtwItems,
               ),
-              CircularIcon(
+              const CircularIcon(
                 icon: Iconsax.add,
                 backgroundColor: TColors.black,
                 width: 40,
@@ -52,11 +52,11 @@ class BottomAddToCard extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {},
-            child: Text('Add To Card'),
             style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.all(TSizes.md),
+                padding: const EdgeInsets.all(TSizes.md),
                 backgroundColor: TColors.black,
-                side: BorderSide(color: TColors.black)),
+                side: const BorderSide(color: TColors.black)),
+            child: const Text('Add To Card'),
           )
         ],
       ),

@@ -41,6 +41,7 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   carousel_slider: ^4.2.1
   readmore: ^2.2.0
+  flutter_rating_bar: ^4.0.1
 
 
 
@@ -79,6 +80,7 @@ flutter:
     - assets/images/panner/
     - assets/images/product/
     - assets/images/
+    - assets/images/review/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

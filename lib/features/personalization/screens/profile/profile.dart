@@ -85,14 +85,14 @@ class ProfileScreen extends StatelessWidget {
               ProfileMenu(onPressed: () {}, title: 'Gender', value: 'Male'),
               ProfileMenu(
                   onPressed: () {}, title: 'Date Of Birth', value: '1/2/1998'),
-              Divider(),
-              SizedBox(
+              const Divider(),
+              const SizedBox(
                 height: TSizes.spaceBtwItems,
               ),
               Center(
                 child: TextButton(
                   onPressed: () {},
-                  child: Text(
+                  child: const Text(
                     'Close Account ',
                     style: TextStyle(color: Colors.red),
                   ),

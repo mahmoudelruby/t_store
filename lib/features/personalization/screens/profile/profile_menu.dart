@@ -19,7 +19,7 @@ class ProfileMenu extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: TSizes.spaceBtwItems * 1),
+        padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwItems * 1),
         child: Row(
           children: [
             Expanded(

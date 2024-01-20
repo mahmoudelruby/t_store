@@ -7,6 +7,7 @@ import 'package:t_store/common/widgets/custom_widget/curved_edge_widget.dart';
 import 'package:t_store/common/widgets/texts/section_heading.dart';
 import 'package:t_store/common/widgets/tiles/setting_menu_tile.dart';
 import 'package:t_store/common/widgets/tiles/user_profile_tiles.dart';
+import 'package:t_store/features/personalization/screens/address/address.dart';
 import 'package:t_store/features/personalization/screens/profile/profile.dart';
 import 'package:t_store/utils/constants/colors.dart';
 
@@ -36,7 +37,8 @@ class SettingsScreen extends StatelessWidget {
                 const SizedBox(
                   height: TSizes.spaceBtwItems,
                 ),
-                 UserProfileTile(onTap: ()=> Get.to(()=>const ProfileScreen())),
+                UserProfileTile(
+                    onTap: () => Get.to(() => const ProfileScreen())),
                 const SizedBox(
                   height: TSizes.spaceBtwSections,
                 )
@@ -53,7 +55,8 @@ class SettingsScreen extends StatelessWidget {
                   const SizedBox(
                     height: TSizes.spaceBtwItems,
                   ),
-                  const SettingsMenuTile(
+                   SettingsMenuTile(
+                    onTap: () => Get.to(() => const UserAddressScreen()),
                       icon: Iconsax.safe_home,
                       title: 'My Address',
                       subtitle: 'Set Shopping delivery '),

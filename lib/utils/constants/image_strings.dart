@@ -31,5 +31,6 @@ static const productImage2='assets/images/product/short.jpg';
   static const productImage3='assets/images/product/jackets.jpg';
 
   //
-static const String user='assets/images/user.jpg';
+static const String user='assets/images/review/user.jpg';
+static const String userProfileImage= 'assets/images/review/user.jpg';
 }

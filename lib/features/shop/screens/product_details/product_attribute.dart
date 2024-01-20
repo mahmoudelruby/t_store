@@ -17,17 +17,17 @@ class ProductAttribute extends StatelessWidget {
     return Column(
       children: [
         TCircularContainer(
-          padding: EdgeInsets.all(TSizes.md),
+          padding: const EdgeInsets.all(TSizes.md),
           backgroundColor: darkMode ? TColors.darkerGrey : TColors.grey,
           child: Column(
             children: [
               Row(
                 children: [
-                  SectionHeading(
+                  const SectionHeading(
                     title: 'Variation',
                     showActionButton: false,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: TSizes.spaceBtwItems,
                   ),
                   Column(
@@ -35,7 +35,7 @@ class ProductAttribute extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          ProductTitle(
+                          const ProductTitle(
                             title: 'Price : ',
                             smallSize: true,
                           ),
@@ -46,15 +46,15 @@ class ProductAttribute extends StatelessWidget {
                                 .titleSmall!
                                 .apply(decoration: TextDecoration.lineThrough),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: TSizes.spaceBtwItems,
                           ),
-                          ProductPriceText(price: '20')
+                          const ProductPriceText(price: '20')
                         ],
                       ),
                       Row(
                         children: [
-                          ProductTitle(
+                          const ProductTitle(
                             title: 'Stock : ',
                             smallSize: true,
                           ),
@@ -68,7 +68,7 @@ class ProductAttribute extends StatelessWidget {
                   )
                 ],
               ),
-              ProductTitle(
+              const ProductTitle(
                 title:
                     'This is Description of the Product and it can go up max 4 lines',
                 smallSize: true,
@@ -77,12 +77,12 @@ class ProductAttribute extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: TSizes.spaceBtwItems,),
+        const SizedBox(height: TSizes.spaceBtwItems,),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SectionHeading(title: 'Colors',showActionButton: false,),
-            SizedBox(height: TSizes.spaceBtwItems/2,),
+            const SectionHeading(title: 'Colors',showActionButton: false,),
+            const SizedBox(height: TSizes.spaceBtwItems/2,),
             Wrap(
               children: [
                 TChoiceChip(text: 'Green', selected: true,onSelected: (value){},),
@@ -96,8 +96,8 @@ class ProductAttribute extends StatelessWidget {
         Column(
 crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SectionHeading(title: 'Sizes',showActionButton: false,),
-            SizedBox(height: TSizes.spaceBtwItems/2,),
+            const SectionHeading(title: 'Sizes',showActionButton: false,),
+            const SizedBox(height: TSizes.spaceBtwItems/2,),
             Wrap(
               spacing: 5,
               children: [

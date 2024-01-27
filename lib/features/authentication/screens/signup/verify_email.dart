@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:t_store/common/widgets/success_screen.dart';
 import 'package:t_store/features/authentication/screens/login/login.dart';
+import 'package:t_store/features/shop/screens/success_screen/success_screen.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
@@ -63,7 +63,12 @@ class VerifyEmailScreen extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Get.to(() => const SuccessScreen());
+                    Get.to(() =>  SuccessScreen(
+                      title:TTexts.yourAccountCreateTitle ,
+                      subtitle:TTexts.yourAccountCreateSubTitle ,
+                      image:TImages.onBoardingPage3 ,
+                      onPressed: ()=>Get.to(() => const LoginScreen()),
+                    ));
                   },
                   child: const Text('continue'),
                 ),

@@ -1,22 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_store/features/shop/screens/cart/cart.dart';
 import 'package:t_store/utils/constants/colors.dart';
+import 'package:t_store/utils/helpers/helper_func.dart';
 
 class CartCounterIcon extends StatelessWidget {
   const CartCounterIcon({
     super.key,
     this.iconColor,
+    this.counterBgColor,
+    this.counterTextColor,
     required this.onPresses,
   });
 
-  final Color? iconColor;
+  final Color? iconColor, counterBgColor, counterTextColor;
   final VoidCallback onPresses;
   @override
   Widget build(BuildContext context) {
+    final darkMode = THelperFunctions.isDarkMode(context);
     return Stack(
       children: [
         IconButton(
-            onPressed: onPresses,
+            onPressed: () => Get.to(() => const CartScreen()),
             icon: Icon(
               Iconsax.shopping_bag,
               color: iconColor,
@@ -27,7 +33,8 @@ class CartCounterIcon extends StatelessWidget {
               width: 18,
               height: 18,
               decoration: BoxDecoration(
-                  color: TColors.black,
+                  color: counterBgColor ??
+                      (darkMode ? TColors.white : TColors.black),
                   borderRadius: BorderRadius.circular(100)),
               child: Center(
                 child: Text(
@@ -35,7 +42,7 @@ class CartCounterIcon extends StatelessWidget {
                   style: Theme.of(context)
                       .textTheme
                       .labelLarge!
-                      .apply(color: TColors.white, fontSizeFactor: .8),
+                      .apply(color: counterTextColor, fontSizeFactor: .8),
                 ),
               ),
             ))

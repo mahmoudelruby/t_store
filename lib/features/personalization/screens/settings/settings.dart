@@ -55,8 +55,8 @@ class SettingsScreen extends StatelessWidget {
                   const SizedBox(
                     height: TSizes.spaceBtwItems,
                   ),
-                   SettingsMenuTile(
-                    onTap: () => Get.to(() => const UserAddressScreen()),
+                  SettingsMenuTile(
+                      onTap: () => Get.to(() => const UserAddressScreen()),
                       icon: Iconsax.safe_home,
                       title: 'My Address',
                       subtitle: 'Set Shopping delivery '),
